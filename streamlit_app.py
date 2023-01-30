@@ -29,9 +29,11 @@ streamlit.dataframe(fruits_to_show)
 ### new section to display fruitvie api response
 streamlit.header("Fruityvice Fruit Advice!")
 import requests
-
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json()) # write data to the screen
+# fruit name is static in the line below
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+# to make it variale let's add plus sign
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+" kiwi")
+#streamlit.text(fruityvice_response.json()) # write data to the screen
 
 # take json version of the response and normalize it to panda dataframe
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
