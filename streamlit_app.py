@@ -32,7 +32,7 @@ import requests
 # fruit name is static in the line below
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 # to make it variale let's add plus sign
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+" kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 #streamlit.text(fruityvice_response.json()) # write data to the screen
 
 # take json version of the response and normalize it to panda dataframe
